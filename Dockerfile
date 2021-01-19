@@ -6,7 +6,7 @@ RUN yum clean all
 RUN yum repolist -v
 RUN yum update -y && yum upgrade -y
 # Same as original Dockerfile
-RUN yum -y install epel-release
+RUN yum -y install epel-release tree
 RUN yum -y install git ansible openssh-clients
 WORKDIR /root
 RUN git clone https://github.com/mtarking/cisco-nxos-ansible-vxlan-evpn
